@@ -24,7 +24,11 @@ internal class Program
         var app = builder.Build();
         var env = app.Services.GetRequiredService<IPythonEnvironment>();
         var ifcOps = env.IfcOps();
+        var gmshOps = env.GmshOps();
+        gmshOps.Initialize();
+
         Console.WriteLine($"Ifcopenshell version: {ifcOps.GetVersion()}");
+        Console.WriteLine($"Gmsh version: {gmshOps.GetVersion()}");
         Console.ReadKey();
     }
 }

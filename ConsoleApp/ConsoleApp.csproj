@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PythonFunctions\PythonFunctions.csproj" />
+    <PackageReference Include="CSnakes.Runtime" Version="1.*-*" />
   </ItemGroup>
 
 </Project>
