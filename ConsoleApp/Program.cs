@@ -9,7 +9,7 @@ internal class Program
     static void Main(string[] args)
     {
         var home = Path.Join(Environment.CurrentDirectory, "..", "..", "..", "..");
-        var venv = @"C:\Users\caoduroc\source\repos\TestCSnakes\.venv";
+        var venv = Path.Join(home, ".venv");
         var builder = Host.CreateDefaultBuilder(args)
             .ConfigureServices(services =>
             {
@@ -18,7 +18,7 @@ internal class Program
                     //.WithHome(home)
                     .WithVirtualEnvironment(venv)
                     .FromNuGet("3.12.8");
-                    //.FromMacOSInstallerLocator("3.12.8")
+                    //.FromMacOSInstallerLocator("3.12.8");
                     //.WithPipInstaller();
             });
         var app = builder.Build();
