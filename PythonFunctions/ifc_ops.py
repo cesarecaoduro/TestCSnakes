@@ -1,4 +1,4 @@
 ﻿import ifcopenshell
 
-def version() -> str: 
+def get_version() -> str: 
    return str(ifcopenshell.version)

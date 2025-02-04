@@ -23,8 +23,8 @@ internal class Program
             });
         var app = builder.Build();
         var env = app.Services.GetRequiredService<IPythonEnvironment>();
-        var ifcopenshell = env.Ifcopenshell();
-        Console.WriteLine($"Ifcopenshell version: {ifcopenshell.Version()}");
+        var ifcOps = env.IfcOps();
+        Console.WriteLine($"Ifcopenshell version: {ifcOps.GetVersion()}");
         Console.ReadKey();
     }
 }

@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ifcopenshell.py" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <AdditionalFiles Include="ifcopenshell.py">
+    <AdditionalFiles Include="ifc_ops.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AdditionalFiles>
   </ItemGroup>
